@@ -49,7 +49,7 @@ ul,li{ margin:0px; padding:0px;list-style:none;}
 .m_describebox .img{margin-bottom: 20px;}
 .m_describebox .skcenterbox{float: left;margin:50px 0px;width: 100%;}
 .m_describebox .skcenterbox figcaption{color: #3b4459;font-size: 40px;position: relative;padding-bottom: 44px;margin-bottom: 44px;text-align:left;}
-.m_describebox .skcenterbox figcaption:after{position: absolute;content: "";left:0px;bottom: 0px;width:56px;height:4px;background-color: #026dff;}
+.m_describebox .skcenterbox figcaption:after{position: absolute;content: "";left:0px;bottom: 0px;width:56px;height:4px;background-color: #64c112;}
 .m_describebox .skcenterbox p{text-align:left;line-height: 1.86;color: #6c6f82;font-size:28px;}
 .m_describebox .ViewCertificate{background-position:0px -369px;width: 488px;height:70px;display:inline-block;float: left;margin-bottom: 100px;}
 .m_describebox .ViewCertificate:active{background-position:0px -500px;}
@@ -109,7 +109,7 @@ ul,li{ margin:0px; padding:0px;list-style:none;}
 .m_describebox2{margin-top:30px;width: 100%;box-sizing: border-box;padding:0px 60px;text-align: center;background: #F7F8FA}
 .m_describebox2 .skcenterbox2{float: left;margin:20px 0px 0px 0px;width: 100%;}
 .m_describebox2 .skcenterbox2 figcaption{color: #3b4459;font-size: 38px;position: relative;padding-bottom: 20px;margin-bottom: 30px;text-align:left;margin-left: 25%}
-.m_describebox2 .skcenterbox2 figcaption:after{position: absolute;content: "";left:80px;bottom: 0px;width:56px;height:3px;background-color: #026dff;}
+.m_describebox2 .skcenterbox2 figcaption:after{position: absolute;content: "";left:80px;bottom: 0px;width:56px;height:3px;background-color: #64c112;}
 .m_describebox2 .ViewCertificate{background-position:0px -369px;width: 488px;height:70px;display:inline-block;float: left;margin-bottom: 100px;}
 .m_describebox2 .ViewCertificate:active{background-position:0px -500px;}
 
