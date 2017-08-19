@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="Cache-Control" name="no-store" />
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<meta charset="utf-8">
+<title>西瓜妹</title>
+<link href="mob/css/m_appshike1025.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="mob/js/jquery.min.js"></script>
+<script type="text/javascript" src="mob/js/mobile_base.js"></script>
+
+<link rel="stylesheet" href="mob/css/reset.css" />
+<link rel="stylesheet" href="mob/css/case-style.css" />
+<link rel="stylesheet" href="mob/css/default_skin.css" />
+<script src="mob/js/jquery.cycle2.min.js"></script>
+<script src="mob/js/jquery.sky.carousel-1.0.2.min.js"></script>
+<script src="mob/js/lib.js"></script>
+<script src="mob/js/scripts.js"></script>
+
+<script>
+		if (!(navigator.userAgent.match(/(iPhone|iPod|Android|ios|SymbianOS)/i))) {
+			// location.href='http://appshike.com';
+		 }
+
+        $(function () {
+
+            buildSideNav();
+
+            skyCarousel = $('#character-slider').carousel({
+                itemWidth: 528,
+                itemHeight: 512,
+                enableMouseWheel: false,
+                gradientOverlayVisible: true,
+                gradientOverlayColor: '#F0F3EE',
+                gradientOverlaySize: 300,
+                distance: 30,
+                selectedItemDistance: 80,
+                selectByClick: true,
+                selectedItemZoomFactor: 0.8,
+                unselectedItemZoomFactor: 0.4,
+                navigationButtonsVisible: false,
+                showPreloader: false,
+                autoSlideshow: true
+            })
+
+        })
+
+
+			 /*
+		$(function(){
+			 if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|SymbianOS)/i))) {
+				 $.post("/itry/pc/getInfo",{},function(res){
+						if(res==null||res==''){
+							var money = localStorage.getItem('money');
+
+						}else{
+							var data = res.jsonStr;
+							if(data!=null&&data.length>0){
+				        		for(var s=0;s<parseInt(Math.random()*10,10);s++){
+				        			data.sort(function(){return Math.random()>0.5});
+				        		}
+
+				        		var divstr = ''
+					        	$.each(data,function(i,n){
+					        		var showStr = n.u_time;
+					        		if(showStr.indexOf('下载了')>-1){
+											var str='<li>\
+											<div class="fl user-name">\
+												<img src="'+n.w_headimg+'" alt=""/>'+n.w_name+'</div>\
+											<div class="fl user-info">\
+												<p class="txt">'+showStr.replace('下载了','得到了').replace('，赚了',' 的 ')+' 现金红包</p>\
+												<p  class="time">'+n.c_time+' 分钟前</p>\
+												<span class="red-t">红包</span>\
+											</div></li>';
+											$('#li_list').append(str);
+					        		}else if(showStr.indexOf('提现了')>-1){
+									var str='<li>\
+											<div class="fl user-name">\
+												<img src="'+n.w_headimg+'" alt=""/>'+n.w_name+'</div>\
+											<div class="fl user-info">\
+												<p class="txt">'+showStr+'</p>\
+												<p  class="time">'+n.c_time+' 分钟前</p>\
+												<span class="blue-t">提现</span>\
+											</div></li>';
+											$('#li_list').append(str);
+
+								}else if(showStr.indexOf('充值了')>-1){
+									var str='<li>\
+											<div class="fl user-name">\
+												<img src="'+n.w_headimg+'" alt=""/>'+n.w_name+'</div>\
+											<div class="fl user-info">\
+												<p class="txt">'+showStr.replace('全国','全国 ').replace('斯凯','').replace(' 流量','流量')+'</p>\
+												<p  class="time">'+n.c_time+' 分钟前</p>\
+												<span class="green-t">充值</span>\
+											</div></li>';
+											$('#li_list').append(str);
+								}
+					        	});
+				        	}
+						}
+					});
+
+			 }
+		});*/
+</script>
+<!--style type="text/css">
+   @-webkit-keyframes move{
+	   0%{left:-500px;}
+	   100%{left:0;}
+   }
+   #wrap2{width:600px;height:130px;border:1px solid #000;position:relative;margin:100px auto;
+	   overflow: hidden;}
+
+   #list{position:absolute;left:0;top:0;padding:0;margin:0;
+	   -webkit-animation:5s move infinite linear;width:200%;}
+
+   #list li{list-style:none;width:120px;height:130px;border:1px solid red;background: pink;
+	   color:#fff;text-align: center;float:left;font:normal 50px/2.5em '微软雅黑';}
+
+   #wrap:hover #list{-webkit-animation-play-state:paused;}
+</style-->
+</head>
+<body>
+	<div class="wrap">
+		<div class="sk_headbox cf">
+			<p class="txt1">人人都喜爱的</p>
+			<p class="txt2"><strong>西瓜妹社区</strong></p>
+			<p class="txt3">发现有趣好玩的App</p>
+			<a href="javascript:void(0)" class="Joinsk" onclick="gaEvent(this)">开始试玩</a>
+			<span class="btn_play_mp4" onclick="playmp4()"></span>
+		</div>
+		<div class="m_describebox cf">
+			<p class="img"><img src="http://static.appshike.com/pc/images/m_decorate102501.svg" alt=""></p>
+			<figure class="fr skcenterbox">
+				<figcaption>邀请玩家玩游戏，拿30%提成奖励</figcaption>
+				<p>只要一部手机就能赚钱</p>
+				<p>无需成本，没有风险</p>
+			</figure>
+			<figure class="fr skcenterbox">
+				<figcaption>让好友赚钱，我再拿3%提成奖励</figcaption>
+					<p>收徒弟，让徒弟赚钱</p>
+					<p>拿3%提成奖励</p>
+			</figure>
+		</div>
+
+
+		<div id="site-wrapper">
+          <section id="section-header" data-coloroverlap="dark"></section>
+          <section id="second-phase" class="phase-row" data-title="Illustrations" data-coloroverlap="light">
+        <div class="shell">
+            <div class="second-row">
+                <article>
+                    <div id="character-slider" class="sky-carousel sc-no-select" style="visibility: visible;">
+                        <h2>边玩游戏边赚钱，每刻都有收获</h2>
+						<div class="sky-carousel-wrapper" style="visibility: visible; opacity: 1;">
+                            <ul class="sky-carousel-container" style="margin-top: -21.2px; left: -1552.4px; transition: left 0.45s ease-out; -webkit-transition: left 0.45s ease-out;">
+                                <li style="transform-origin: center 256px 0px; transform: translate(0px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 10;" class="">
+                                    <img src="mob/img/bird1.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Snoop</h2>
+                                        <p>Are you in the market for information? If so, then Snoop's the Bird for you! This Bird specialises at working undercover, discretely finding out whatever you need to know. Shhh… it's a secret, alright?</p>
+                                    </div>
+                                </li>
+                                <li style="transform-origin: center 256px 0px; transform: translate(241.2px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 8;" class="">
+                                    <img src="mob/img/bird2.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Snappy</h2>
+                                        <p>Looking for a wedding photographer? Or perhaps you want a portrait of your adorable pooch, to decorate the mantelpiece! When it comes to photography, call Snappy.</p>
+                                    </div>
+                                </li>
+                                <li style="transform-origin: center 256px 0px; transform: translate(482.4px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 8;" class="">
+                                    <img src="mob/img/bird3.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Handy</h2>
+                                        <p>Our Handy Bird loves the jobs you hate… from putting up shelves to fixing a leaky pipe, this Bird is the DIY master. </p>
+                                    </div>
+                                </li>
+                                <li style="transform-origin: center 256px 0px; transform: translate(723.6px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 9;" class="">
+                                    <img src="mob/img/bird4.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Blabber</h2>
+                                        <p>Got a message that needs to be delivered? Or perhaps it's an urgent package you need sent. Blabber will get your mail to its recipient, faster than a speeding bullet. Well, almost.</p>
+                                    </div>
+                                </li>
+                                <li style="transform-origin: center 256px 0px; transform: translate(964.8px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 8;" class="">
+                                    <img src="mob/img/bird5.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Wordy</h2>
+                                        <p>Wordy loves to talk. No matter whether you're writing an email, a website, your resignation note or your acceptance speech - this Bird always knows what to say!</p>
+                                    </div>
+                                </li>
+                                <li class="" style="transform-origin: center 256px 0px; transform: translate(1206px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 8;">
+                                    <img src="mob/img/bird6.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Basher</h2>
+                                        <p>When it comes to construction, Basher is the Bird for the job. From putting up fences and garden sheds, through to interior remodelling - this Bird just loves to build.</p>
+                                    </div>
+                                </li>
+                                <li style="transform-origin: center 256px 0px; transform: translate(1447.2px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 8;" class="">
+                                    <img src="mob/img/bird7.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Splasher</h2>
+                                        <p>Splasher is the expert when it comes to painting. From choosing the colours for your new nursery, through to exterior weather proofing treatments: this Bird was born with a brush in its hand!</p>
+                                    </div>
+                                </li>
+                                <li style="transform-origin: center 256px 0px; transform: translate(1688.4px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 10;" class="sc-selected">
+                                    <img src="mob/img/bird8.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Nerdy</h2>
+                                        <p>The ultimate iBird, our Tinker has the know-how that most of us lack. If you find yourself baffled by technology, then join the club - and call on Tinker for all your IT needs.</p>
+                                    </div>
+                                </li>
+                                <li style="transform-origin: center 256px 0px; transform: translate(2009.6px, 0px) scale(0.799983333333332) translateZ(0px); opacity: 0.999983333333332; z-index: 11;" class="">
+                                    <img src="mob/img/bird9.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Thinker</h2>
+                                        <p>Out of all the Birds, Thinker is the brains of the operation. Need a cunning plan delivered in a flash? From business strategies through to first class excuses, Thinker has got a plan for every scenario.</p>
+                                    </div>
+                                </li>
+                                <li style="transform-origin: center 256px 0px; transform: translate(2330.8px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 9;" class="">
+                                    <img src="mob/img/bird10.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Maestro</h2>
+                                        <p>Maestro is no stranger to haute cuisine. From baking lessons through to full-scale catering operations, let Maestro cook you up a treat!</p>
+                                    </div>
+                                </li>
+                                <li style="transform-origin: center 256px 0px; transform: translate(2572px, 0px) scale(0.4) translateZ(0px); opacity: 0.6; z-index: 8;" class="">
+                                    <img src="mob/img/bird11.png" alt="" class="sc-image">
+                                    <div class="sc-content">
+                                        <h2>Super</h2>
+                                        <p>Is it a Bird? Is it a… no hang on, it is a Bird. Our Super Bird offers the ultimate, all-in-one service. If you've got a unique problem that the other Birds can't fix, then Super is always ready to come to your rescue.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sc-content-wrapper"><div class="sc-content-container" style="visibility: visible; opacity: 1;"><div class="sc-content"><h2>Thinker</h2><p>Out of all the Birds, Thinker is the brains of the operation. Need a cunning plan delivered in a flash? From business strategies through to first class excuses, Thinker has got a plan for every scenario.</p></div></div></div><canvas class="sc-overlay sc-overlay-left" width="300" height="1" style="width: 300px;"></canvas><canvas class="sc-overlay sc-overlay-right" width="300" height="1" style="width: 300px;"></canvas>
+
+					</div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    </div>
+
+
+		<!--div id="wrap2">
+			<ul id="list">
+				<li>10</li>
+				<li>9</li>
+				<li>8</li>
+				<li>7</li>
+				<li>6</li>
+
+				<li>5</li>
+				<li>4</li>
+				<li>3</li>
+				<li>2</li>
+				<li>1</li>
+			</ul>
+	    </div-->
+		<!--div class="skdatabox cf">
+			<h3 class="tit">每时都有新应用，每刻都有新收获!</h3>
+				<div class="user-box" id="userlistbox">
+					<ul class="userlist cf" id="li_list">
+					</ul>
+				</div>
+		</div>
+		<div class="handingcash cf">
+			<img src="http://static.appshike.com/pc/images/Backnow_img1025.png" width="100%" alt=""/>
+		</div-->
+		<div class="m_describebox cf">
+			<p class="img"><img src="http://static.appshike.com/pc/images/m_decorate102503.svg" alt=""></p>
+			<figure class="fr skcenterbox">
+				<figcaption>支持 微信/支付宝 提现</figcaption>
+				<p>随时提现，当日到账，你可以在这里享受最便捷的服务，西瓜妹还为你提供史上最专业的培训服务，美女主播24小时在线。</p>
+			</figure>
+			<p class="img"><img src="http://static.appshike.com/pc/images/m_decorate102502.png" alt=""></p>
+			<figure class="fr skcenterbox">
+				<figcaption>安全认证，真实可靠</figcaption>
+				<p>西瓜妹是一款通过安全认证的软件，推广奖金真实有效，实时到帐。</p>
+			</figure>
+			<a href="http://v.pinpaibao.com.cn/authenticate/cert/?site=www.appshike.com&at=business" class="ViewCertificate" style="display:none;"></a>
+		</div>
+		<div class="sweep_qrcode cf" style="display:none">
+			<h4>关注试客 得试玩红包</h4>
+			<p><img src="http://static.appshike.com/pc/images/qrcode1025.png" alt=""/></p>
+			<font>微信扫码，开始赚钱</font>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var scrtime;
+		    $("#userlistbox").hover(function(){
+		         clearInterval(scrtime);
+		    },function(){
+		        scrtime = setInterval(function(){
+		            	var ul = $("#userlistbox ul");
+		                var liHeight = ul.find("li:last").height()+52;
+		                ul.animate({marginTop : liHeight+"px"},1000,function(){
+		                	ul.find("li:last").prependTo(ul);
+		                	ul.find("li:first").hide();
+		                	ul.css({marginTop:0});
+		                	ul.find("li:first").fadeIn(1000);
+		                });
+		        },3000);
+		    }).trigger("mouseleave");
+		    //百度统计
+			 var _hmt = _hmt || [];
+			 (function() {
+			  var hm = document.createElement("script");
+			  hm.src = "//hm.baidu.com/hm.js?dad90ae125e44a3bbb3c9576169be319";
+			  var s = document.getElementsByTagName("script")[0];
+			  s.parentNode.insertBefore(hm, s);
+
+			  var hm1 = document.createElement("script");
+			  hm1.src = "//hm.baidu.com/hm.js?bdac52987907ba51f2a8d1092a3f6e95";
+			  var s1 = document.getElementsByTagName("script")[0];
+			  s1.parentNode.insertBefore(hm1, s1);
+
+			  var hm2 = document.createElement("script");
+			  hm2.src = "https://hm.baidu.com/hm.js?fd90d696af3a682872d9c1717b2fe5f6";
+			  var s2 = document.getElementsByTagName("script")[0];
+			  s2.parentNode.insertBefore(hm2, s2);
+
+			  var hm3 = document.createElement("script");
+			  hm3.src = "https://hm.baidu.com/hm.js?ae31417bca17cdac6ecffa21c4b36556";
+			  var s3 = document.getElementsByTagName("script")[0];
+			  s3.parentNode.insertBefore(hm3, s3);
+			})();
+	</script>
+			<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97200328-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

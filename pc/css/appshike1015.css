@@ -1,0 +1,144 @@
+*{padding: 0px;margin: 0px;font:12px/20px 'PingFang SC', '思源黑体','冬青黑体','Microsoft Yahei',Arial,SimSun,'Helvetica Neue',Helvetica,sans-serif;}
+html,body{min-width: 1200px;height: 100%;}
+.cf:before,.cf:after{content:"";display:table;}
+.cf:after{clear:both;}
+.cf{zoom:1;}
+.fl{float: left;}
+.fr{float: right;}
+
+
+.w1200{width: 1200px;margin: 0 auto;}
+.head_bj{background:url(http://static.appshike.com/pc/images/headerbg.png)no-repeat center 170%,linear-gradient(to bottom, #59c9ff, #006cf5);height:760px;width: 100%;position: relative;}
+.h_txtbox{float: left;margin-top:190px;padding-left:110px;text-align: left;}
+.h_txtbox .txt1{font-size: 28px;font-weight: 500;letter-spacing:5px;color: #ffffff;line-height: 40px;}
+.h_txtbox .text2{letter-spacing: 5.8px;font-size:18px;color: #ffffff;margin-top: 10px;}
+
+.head_txt{width: 380px;font-size:56px; color: #fff;overflow: hidden;line-height:78px;font-weight: 500;}
+.Joinsk{position: relative;width: 238px;height: 55px;margin-top: 110px;}
+.Joinsk .btn_join{width:200px;height:51px;display: block;border-radius: 100px; box-shadow: 0 4px 10px 0 rgba(14, 21, 96, 0.3);background:url(http://static.appshike.com/pc/images/Smalldeckicon.svg)no-repeat 0px -650px;cursor: pointer;}
+.Joinsk .btn_join:hover{opacity: .65;cursor: default;color: #044cc0;}
+.Joinsk .sk_qrcode{position: absolute; z-index: 2;left:250px;bottom: 0px;background: #fff;text-align: center;padding: 23px 30px 19px 30px;font-size: 16px;font-weight: 400;text-align: center;color: #969697;width: 140px;border-radius: 8px;box-shadow: 0 10px 22px 0 #005fe1;opacity: 0;-webkit-animation-duration:.8s;animation-duration:.8s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.Joinsk .sk_qrcode label{color: #969697;font-size: 16px;margin-top:12px;display: block;}
+.Joinsk .btn_join:hover + .sk_qrcode{-webkit-animation-name:fadeInUp;animation-name:fadeInUp;}
+@-webkit-keyframes fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,20%,0);transform:translate3d(0,20%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+@keyframes fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,20%,0);transform:translate3d(0,20%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+
+@-webkit-keyframes fadeInDown{0%{opacity:1;-webkit-transform:none;transform:none}100%{opacity:0;-webkit-transform:translate3d(0,20%,0);transform:translate3d(0,20%,0)}}
+@keyframes adeInDown{0%{opacity:1;-webkit-transform:none;transform:none}100%{opacity:0;-webkit-transform:translate3d(0,20%,0);transform:translate3d(0,20%,0)}}
+.fadeInDown{-webkit-animation-name:fadeInDown;animation-name:fadeInDown;-webkit-animation-duration:.5s;animation-duration:.5s;}
+.btn_play_mp4{width: 60px;height: 60px;background:url(http://static.appshike.com/pc/images/Smalldeckicon.svg)no-repeat 0px -462px #fff;border-radius: 100%;display: block;position: absolute;bottom: -40px;left:50%;transform: translateX(-50%); cursor: pointer;border: 8px solid #fff;box-shadow: 0 0 35px 0 #ffffff;z-index: 6;}
+.btn_play_mp4:hover{background-position-y: -558px;}
+.play_tips{position: absolute;bottom:-30px;left:50%;z-index: 5;height:60px;overflow: hidden;width: 200px;}
+.btn_play_mp4:hover + .play_tips span{left:0px;-webkit-transition: .8s;transition: .8s;}
+.play_tips span{padding: 8px 25px 8px 50px;width:100px;height:40px;display:block;border-radius:20px 100px 100px 20px;background-color: #3d62ff; color: #ffffff;font-size: 12px;position: absolute;left:-200px;top:0px;-webkit-transition:.8s;transition:.8s;}
+.videobox{background: rgba(0,0,0,.5);position: fixed;top:0px;left:0px;right:0px;bottom:0px;width: 100%;height: 100%;z-index: 8;}
+.videobox .playmp4{width:640px;height: 360px;background: #fff;position: fixed;top:50%;left:50%;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
+
+.videobox .playmp4 .close_off{width:40px;height:40px;position: absolute;border-radius: 100%;display:inline-block;top:-20px;right:-20px;background: #fff;cursor: pointer;}
+.videobox .playmp4 .close_off:after,.videobox .playmp4 .close_off:before{content: "";position: absolute;width: 68%;height:3px;top:50%;left:50%;display: block;background: #bebebe;}
+.videobox .playmp4 .close_off:after{-webkit-transform: translate(-50%,-50%) rotate(45deg);transform: translate(-50%,-50%) rotate(45deg);}
+.videobox .playmp4 .close_off:before{-webkit-transform: translate(-50%,-50%) rotate(-45deg);transform: translate(-50%,-50%) rotate(-45deg);}
+
+.sktxt-box{box-sizing: border-box;padding: 0px 112px;margin-top:100px}
+.sktxt-box .skcenterbox{width:45%;text-align:left;margin-top: 6%;}
+.sktxt-box .skcenterbox figcaption{position: relative;color: #3b4459;font-size: 25px;padding-bottom:24px;margin-top:40px;}
+.sktxt-box .skcenterbox figcaption:after{content: "";width:28px;height:2px;position: absolute;left:0px;bottom: 0px;display: block;background-color: #026dff;}
+.sktxt-box .skcenterbox p{line-height: 1.86;color: #6c6f82;font-size:14px;margin-top: 24px;}
+.sktxt-box .skcenterbox .ViewCertificate{background: url(http://static.appshike.com/pc/images/Smalldeckicon.svg)no-repeat 0px -173px;width: 126px;height:38px;display:inline-block;margin-top: 35px;}
+.sktxt-box .skcenterbox .ViewCertificate:hover{background-position-y:-242px;}
+.userdatabox{height: 257px;background:url(http://static.appshike.com/pc/images/bulletinbj1015.svg)no-repeat center top #6E80F0;}
+.user-tit{font-size: 24px;line-height: 33px; color: #ffffff;margin-top: 50px;}
+#userlistbox{height:140px; width:780px; position:relative;overflow:hidden;}
+.userdatabox .user-box{margin-top: 36px;}
+.userdatabox .user-box .userlist{width: 780px;list-style: none;margin: 0px;padding: 0px;}
+.userdatabox .user-box .userlist li{float: left;padding-bottom: 50px;}
+.userdatabox .user-box .userlist li .user-name{width: 112px;height: 81px;display:block;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;text-align: center;font-size: 14px;color:#fff;font-weight: 600;margin:5px 10px 0px 0px;}
+.userdatabox .user-box .userlist li .user-name img{width: 54px;height: 54px;border-radius: 100%;}
+.userdatabox .user-box .userlist li .user-info{position: relative;width:650px;height: 90px;box-sizing: border-box;padding: 20px 30px 20px 47px;text-align:left;background:url(http://static.appshike.com/pc/images/userdecoratebj.svg);}
+.userdatabox .user-box .userlist li .user-info .txt{color: #3b4459;font-size: 14px;width: 80%;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;}
+.userdatabox .user-box .userlist li .user-info .time{color: #99a1ae;}
+.userdatabox .user-box .userlist li .user-info .red-t,.userdatabox .user-box .userlist li .user-info .green-t,.userdatabox .user-box .userlist li .blue-t{width: 60px;height: 30px;border-radius: 26px;font-size: 12px;color：#fff;position: absolute;right:42px;top:20px;text-align: center;line-height:30px;color: #fff;}
+.userdatabox .user-box .userlist li .user-info .red-t{background-color: #dd4c32;}
+.userdatabox .user-box .userlist li .green-t{background-color: #ffc31a;}
+.userdatabox .user-box .userlist li .blue-t{background-color: #6cbc41;}
+
+.Issuebonus{width: 100%;text-align: center;background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#89C239), to(#a5d761))}
+.returncashbox{width: 1200px;height:370px;background:url(http://static.appshike.com/pc/images/Backnow_img1025.png)no-repeat center top;margin: 0 auto;position: relative;overflow: hidden;}
+.returncash{position: absolute;top:0px;left:296px;width:350px;height: 250px;}
+.returncash p{position: absolute;top:-20px;left:44px;z-index: 20;}
+.units,.billion,.num0,.num1,.num2,.num3,.num4,.num5,.num6,.num7,.num8,.num9,.t6{background:url(http://static.appshike.com/pc/images/Smalldeck_Digit.png)no-repeat;}
+.units{width:130px;height:140px;display: block;background-position:-8px -1650px;position: absolute;top:0px;right:0px;z-index: 2;}
+.num0{background-position:-50px 0px;}
+.num1{background-position:-54px -148px;}
+.num2{background-position:-50px -294px;}
+.num3{background-position:-50px -442px;}
+.num4{background-position:-50px -590px;}
+.num5{background-position:-50px -742px;}
+.num6{background-position:-50px -889px;}
+.num7{background-position:-50px -1040px;}
+.num8{background-position:-50px -1188px;}
+.num9{background-position:-50px -1337px;}
+.t1,.t2,.t3,.t4,.t5,.t6,.t7,.t8{width:76px;height:106px;display: block;position: absolute;}
+.t1{top:52px;right:98px;z-index:3;}
+.t2{top:72px;right:132px;z-index:4;}
+.t3{top:92px;right:166px;z-index:5;}
+.t4{top:112px;right:199px;z-index:6;}
+.t5{bottom:-11px;left:-2px;z-index:8;}
+.t6{top:122px;right:239px;z-index:7;height:120px;background-position:-42px -1473px;display: block;}
+
+
+.WeChatscanbox{background:url(http://static.appshike.com/pc/images/WeChatscanbj1015.png) no-repeat center bottom #4c7bff;width: 100%;height: 452px;}
+.WeChatscanbox > div{text-align: center;width: 280px;margin-top: 120px;}
+.WeChatscanbox > div p{font-size:20px;font-weight: 600;margin: 20px 0px 25px 0px;color: #fff;}
+.WeChatscanbox > div p:nth-child(3){color: #ffffff;font-size: 12px;margin-top: 8px;font-weight: normal;}
+.WeChatscanbox > div img{width: 144px;height: 144px;padding:10px;border-radius: 8px;background: #fff;}
+
+
+
+
+
+/****foont****/
+.footerbox{box-sizing: border-box;padding:60px 0px 60px 112px;}
+.footerbox .footinfo{margin-right: 50px;display: inline-block;text-align: left;color: #868a8f;font-size: 13px;}
+.footerbox .footinfo h4{font-size: 14px;color: #6c727e;margin-bottom: 16px;}
+.footerbox .footinfo a{display: inline-block;padding-left: 20px;color: #868a8f;font-size: 13px;text-decoration: none;background: url(http://static.appshike.com/pc/images/Smalldeckicon.svg)no-repeat 0px -407px;}
+.footinfo a:hover{color: #6c727e;background-position-x: -106px;}
+.footerbox .footlogo{width: 92px;height: 32px;text-indent: -99999px;overflow:hidden;display: block;background:url(http://static.appshike.com/pc/images/Smalldeckicon.svg)no-repeat 0px -110px;;}
+.footerbox .ml162{margin-left: 162px;}
+.Copyright{border-top:1px solid #f1f2f6;padding: 20px 0px;color: #c9ced4;text-align: center;}
+.mb74{margin-bottom: 74px;}
+
+/*menu*/
+.menubox{position:absolute;top:0px;left:0px;width: 100%;padding: 25px 0px;z-index: 9;}
+.menubox .sk_logo{background:url(http://static.appshike.com/pc/images/Smalldeckicon.svg)no-repeat 0px 0px;width:83px;height:25px;display: block;text-indent: -9999px;}
+.menubox .menulis{float: right;list-style: none;}
+.menubox .menulis li{float: left;margin-right: 64px;}
+.menubox .menulis li a{font-size: 14px;color: #fff;text-decoration: none;}
+.menubox .menulis li a:hover{color:rgba(255,255,255,.65);}
+.menubox .menulis li:last-child{margin-right:0px;}
+.menubox .menulis li:last-child a{background:url(http://static.appshike.com/pc/images/Smalldeckicon.svg)no-repeat left -313px;padding-left:22px;}
+.menubox .menulis li:last-child a:hover{opacity: .65;color:rgba(255,255,255,1);}
+.menubox.now{background: #fff;position:fixed;top:0px;left:0px;}
+.menubox.now .sk_logo{background-position-y:-56px;}
+.menubox.now .menulis li a{color: #606060;}
+.menubox.now .menulis li a:hover{color:#0064ff;}
+.menubox.now .menulis li:last-child a{background-position-y: -360px;color: rgba(239, 65, 86, 0.7);}
+.menubox.now .menulis li:last-child a:hover{color: rgba(239, 65, 86, 1);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

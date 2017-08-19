@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+		<meta content=always name=referrer>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" media="screen" /> 
+		<meta name="baidu-site-verification" content="ncqrMwSry0" />
+		<meta name="keywords" content="应用试客,试客,应用试客官网,北京多点科技股份有限公司,北京多点科技官网,广告激励平台,iOS,赚钱,App试玩,App下载,应用下载,手机赚钱">
+		<meta name="description" content="应用试客是业内知名的移动应用媒体平台。为用户提供流行应用和游戏的资讯以及试玩服务，让每一个应用为人所用。让用户更方便的找到应用、了解应用，更有体验应用的红包奖励给你拿，让应用试客成为人人喜爱的应用社区。">
+		<title>应用试客官网，提供优质的应用试客服务！-北京多点科技股份有限公司</title>
+		<script type="text/javascript" src="pc/js/jquery.min.js"></script>
+		<script type="text/javascript" src="pc/js/appshikebase1025.js?v=1.0"></script>
+		<link href="pc/css/appshike1015.css" type="text/css" rel="stylesheet" />
+		<script>
+			if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|SymbianOS)/i))) {
+				 location.href='http://appshike.com/pc/m/index.html';
+			 }
+			$(function(){
+				 if (!(navigator.userAgent.match(/(iPhone|iPod|Android|ios|SymbianOS)/i))) {
+					 $.post("/itry/pc/getInfo",{},function(res){
+							if(res==null||res==''){
+								var money = localStorage.getItem('money');
+								
+							}else{
+								var money = res.apply_money;
+								var numStr = (parseInt(parseInt(money.replace(/,/g,''))/10000)+'').split('');
+								$('.moneynum').each(function(i){
+				  					$(this).attr('class','t'+(5-i)+' num'+numStr[i]);
+								});
+								$('.returncash').show();
+								var data = res.jsonStr;
+								if(data!=null&&data.length>0){
+					        		for(var s=0;s<parseInt(Math.random()*10,10);s++){
+					        			data.sort(function(){return Math.random()>0.5});
+					        		}	        		
+				        		
+					        		var divstr = ''
+						        	$.each(data,function(i,n){
+						        		var showStr = n.u_time;
+						        		if(showStr.indexOf('下载了')>-1){
+												var str='<li>\
+												<div class="fl user-name">\
+													<img src="'+n.w_headimg+'" alt=""/><br/>'+n.w_name+'</div>\
+												<div class="fl user-info">\
+													<p class="txt">'+showStr.replace('下载了','得到了').replace('，赚了',' 的 ')+' 现金红包</p>\
+													<p  class="time">'+n.c_time+' 分钟前</p>\
+													<span class="red-t">红包</span>\
+												</div></li>';
+												$('#li_list').append(str);
+						        		}else if(showStr.indexOf('提现了')>-1){
+										var str='<li>\
+												<div class="fl user-name">\
+													<img src="'+n.w_headimg+'" alt=""/><br/>'+n.w_name+'</div>\
+												<div class="fl user-info">\
+													<p class="txt">'+showStr+'</p>\
+													<p  class="time">'+n.c_time+' 分钟前</p>\
+													<span class="blue-t">提现</span>\
+												</div></li>';
+												$('#li_list').append(str);
+									
+									}else if(showStr.indexOf('充值了')>-1){
+										var str='<li>\
+												<div class="fl user-name">\
+													<img src="'+n.w_headimg+'" alt=""/><br/>'+n.w_name+'</div>\
+												<div class="fl user-info">\
+													<p class="txt">'+showStr.replace('全国','全国 ').replace('斯凯','').replace(' 流量','流量')+'</p>\
+													<p  class="time">'+n.c_time+' 分钟前</p>\
+													<span class="green-t">充值</span>\
+												</div></li>';
+												$('#li_list').append(str);
+	
+									}
+						        	});
+					        		//localStorage.setItem("sk_userlist",$('#li_list').html());
+					        	}
+							}
+						});
+						
+				 }
+			});
+		</script>
+		
+	</head>
+	<body>
+		<center>
+			<header class="head_bj">
+				<div class="w1200 cf">
+					<div class="h_txtbox">
+						<p class="txt1">人人都喜爱的</p>
+						<h3 class="head_txt">应用社区</h3>
+						<p class="text2">发现有趣好玩的App</p>
+						<div class="Joinsk">
+							<!-- <span class="btn_join" onclick="location.href='http://i.appshike.com/itry/dl_step1?from=website'"></span>  -->
+							<span class="btn_join"></span>
+							<!-- <span class="sk_qrcode"><img http://static.appshike.com/pc/images/qrcode_20.png" alt="" style="width: 140px;height:140px"><label>微信扫码 加入试客</label></span> -->
+							<span class="sk_qrcode"><img src="http://static.appshike.com/pc/images/sk_invite.png" alt="" style="width: 140px;height:140px"><label>微信扫码 加入试客</label></span>
+						</div>
+					</div>					
+					<span class="btn_play_mp4" onclick="playmp4show()"></span>
+					<p class="play_tips"><span>点击观看视频<br>玩转应用试客</span></p>
+				</div>
+			</header>
+			<div>
+				<div class="w1200 cf" style="margin-bottom: 74px;">
+					<div class="cf sktxt-box">
+						<figure class="fl skcenterbox">
+							<figcaption>试玩应用领现金红包</figcaption>
+							<p>应用试客为你提供超多好玩的应用，试玩应用还能<br/>领取丰厚的现金红包，赶快加入应用试客~</p>
+						</figure>
+						<img class="fr" src="http://static.appshike.com/pc/images/decorate1015_1.svg" alt="" />
+					</div>
+					<div class="cf sktxt-box">
+						<figure class="fr skcenterbox" style="width: 36%;margin-top: 5%;">
+							<figcaption>简单三步，轻松试玩</figcaption>
+								<p>
+									1.	扫描左边二维码关注「应用试客」微信公众号<br/>
+									2.	点击「开始试玩」，下载 App 试玩体验<br/>
+									3.	试玩成功，奖金即时到账，随时提现<br/>
+								</p>
+						</figure>
+						<img class="fl" src="http://static.appshike.com/pc/images/decorate1015_2.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="userdatabox">
+					<div class="w1200 cf">
+						<h3 class="user-tit">每时都有新应用，每刻都有新收获!</h3>
+						<div class="user-box" id="userlistbox">
+							<ul class="userlist cf" id="li_list">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="Issuebonus">
+					<div class="returncashbox">						
+						<div class="returncash" style="display:none;">
+							<p><img src="http://static.appshike.com/pc/images/20161116.png" alt=""></p>
+							<span class="t5 moneynum num2"></span>
+							<span class="t4 moneynum num6"></span>
+							<span class="t3 moneynum num8"></span>
+							<span class="t2 moneynum num5"></span>
+							<span class="t1 moneynum num3"></span>
+							<span class="t6"></span>
+							<span class="units"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="w1200 cf mb74">
+					<div class="cf sktxt-box">
+						<figure class="fr skcenterbox">
+							<figcaption>支持 微信/支付宝 提现</figcaption>
+								<p>随时提现，当日到账，你可以在这里享受最便捷的服务，应用试客<br/>还为你提供手机流量实时兑换服务。</p>
+						</figure>
+						<img class="fl" src="http://static.appshike.com/pc/images/decorate1015_3.svg" alt="" />
+					</div>
+					<div class="cf sktxt-box">
+						<figure class="fl skcenterbox" style="margin-top:0px;">
+							<figcaption>安全认证，真实可靠</figcaption>
+							<p>应用试客是一个通过【安全联盟亚太地区品牌验证中心】认证的合法<br/>专业的优秀平台。</p>
+							<a href="http://v.pinpaibao.com.cn/authenticate/cert/?site=www.appshike.com&at=business" target="_blank" class="ViewCertificate" style="display:none;"></a>
+						</figure>
+						<img class="fr" src="http://static.appshike.com/pc/images/decorate1015_4.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="cf WeChatscanbox" style="display:none">
+				<div class="cf">
+					<p>关注试客 得试玩红包</p>
+					<img src="http://static.appshike.com/pc/images/sk_qrcode.svg" alt=""/>
+					<p>微信扫码，开始赚钱</p>
+				</div>
+			</div>
+		</center>
+		<script>
+			var scrtime;
+		    $("#userlistbox").hover(function(){
+		         clearInterval(scrtime);
+		    },function(){
+		        scrtime = setInterval(function(){
+		            	var ul = $("#userlistbox ul");
+		                var liHeight = ul.find("li:last").height()+52;
+		                ul.animate({marginTop : liHeight+"px"},1000,function(){
+		                	ul.find("li:last").prependTo(ul);
+		                	ul.find("li:first").hide();
+		                	ul.css({marginTop:0});
+		                	ul.find("li:first").fadeIn(1000);
+		                });        
+		        },3000);
+		    }).trigger("mouseleave");
+
+ var _hmt = _hmt || [];
+ (function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?dad90ae125e44a3bbb3c9576169be319";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+  var hm1 = document.createElement("script");
+  hm1.src = "//hm.baidu.com/hm.js?bdac52987907ba51f2a8d1092a3f6e95";
+  var s1 = document.getElementsByTagName("script")[0]; 
+  s1.parentNode.insertBefore(hm1, s1);
+
+  var hm2 = document.createElement("script");
+  hm2.src = "https://hm.baidu.com/hm.js?fd90d696af3a682872d9c1717b2fe5f6";
+  var s2 = document.getElementsByTagName("script")[0]; 
+  s2.parentNode.insertBefore(hm2, s2);
+
+  var hm3 = document.createElement("script");
+  hm3.src = "https://hm.baidu.com/hm.js?ae31417bca17cdac6ecffa21c4b36556";
+  var s3 = document.getElementsByTagName("script")[0]; 
+  s3.parentNode.insertBefore(hm3, s3);
+})();
+
+		</script>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97200328-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>
+
