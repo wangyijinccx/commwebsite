@@ -83,7 +83,7 @@ function MenuFooter(){
 					</li>\
 				</ul>\
 			</div>\
-			<p class="copyright">（暂无）Copyright © 2017 appshike.com, All rights reserved.京ICP备12011038号-5</p>\
+			<p class="copyright">Copyright © 2017 xiguamei.com, All rights reserved.京ICP备1001011号-5</p>\
 		</footer>');
 }
 //左侧菜单开关
