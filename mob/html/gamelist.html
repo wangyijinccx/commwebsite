@@ -9,7 +9,7 @@
 <meta charset="utf-8" >
 <title >西瓜妹</title >
 <link href="../css/m_appshike1025.css" rel="stylesheet" type="text/css" >
-<link href="../css/comm.css" rel="stylesheet" type="text/css">
+<!-- link href="../css/comm.css" rel="stylesheet" type="text/css"-->
 <script type="text/javascript" src="../js/jquery.min.js" ></script >
 <script type="text/javascript" src="../js/mobile_base.js" ></script >
 <style >
@@ -23,6 +23,126 @@
         text-align: center;
         line-height: 55px;
     }
+	h3 {
+		font-size: 100%;
+		font-weight: normal
+	}
+	.mod-news-list {
+		display: -webkit-box;
+		padding: 0 10px;
+	}
+	.mod-news-list li {
+		-webkit-box-flex: 1;
+		-webkit-box-sizing: border-box;
+		min-width: 160px;
+		width: 100%;
+		padding: 14px 0;
+		border-bottom: 1px solid #EDEDED
+	}
+
+
+	.mod-news-list {
+		display: -webkit-box;
+		padding: 0 10px
+	}
+
+	.mod-news-list code {
+		float: right;
+		font-family: Arial
+	}
+
+	.mod-news-list .mod_dot {
+		width: 6px;
+		height: 6px;
+		background-color: #F8AD04;
+		display: inline-block;
+		margin-right: 6px
+	}
+
+	.j_hide_empty {
+		display: none
+	}
+
+	.mod-news-list {
+		display: block
+	}
+
+	.mod-news-list li {
+		-webkit-box-flex: 1;
+		-webkit-box-sizing: border-box;
+		min-width: 160px;
+		width: 100%;
+		padding: 14px 0;
+		border-bottom: 1px solid #EDEDED
+	}
+
+	.mod-news-list li img {
+		display: block;
+		width: 120px;
+		height: 120px;
+		margin-right: 10px
+	}
+
+	.mod-news-list li:nth-child(even) {
+		border-right: 0
+	}
+
+	.mod-news-list li .tit {
+		line-height: 28px;
+		word-wrap: break-word;
+		word-break: break-all
+	}
+
+	.mod-news-list li .tit b {
+		font-weight: normal
+	}
+
+	.mod-news-list li .time {
+		margin-top: 5px;
+		color: #999999
+	}
+
+	.mod-news-list li .time span {
+		margin-right: 5px;
+		font-size: 14px
+	}
+
+	.mod-news-list li .time span.btn {
+		border-radius: 2px;
+		padding: 0 5px;
+		float: right
+	}
+
+	.mod-news-list li .time span.btn a {
+		color: #FFFFFF
+	}
+
+	.mod-news-list li .time span.col-1 {
+		background-color: #F67280
+	}
+
+	.mod-news-list li .time span.col-2 {
+		background-color: #78C4D1
+	}
+
+	.mod-news-list li .time span.col-3 {
+		background-color: #75C8E7
+	}
+
+	.mod-news-list li .time span.col-4 {
+		background-color: #B6D483
+	}
+
+	.mod-news-list figure {
+		display: -webkit-box;
+		-webkit-box-align: center
+	}
+
+	.mod-news-list figure figcaption {
+		-webkit-box-flex: 1;
+		display: block;
+		margin-top: -3px
+	}
 
 </style >
 </head >
@@ -35,10 +155,10 @@
 					<figure >
 						<img src="../img/liujie.png" />
 						<figcaption >
-							<h3 class="tit" style="text-align: left;width: 90%;font-size: 28px;" >六界凌霄(android)</h3 >
+							<h3 class="tit" style="text-align: left;width: 95%;font-size: 28px;" >六界凌霄(android)</h3 >
 							<img style="height: 20px;margin-top: 8px;margin-bottom: 8px" src="../img/game_star_2.png">
 							<h3 class="tit"
-                                style="text-align: left;width: 90%" >修仙ARPG手游大作。组团杀BOSS，更多热血PVP玩法即将开启</h3 >
+                                style="text-align: left;width: 95%;color: #535353" >修仙ARPG手游大作。组团杀BOSS，更多热血PVP玩法即将开启</h3 >
 						</figcaption >
 						<div style="text-align: center; position: relative; background: url(../img/s4.png) no-repeat center; background-size: 90% 100%;width: 120px;height: 60px;border-radius:15px 15px 15px 15px" >
 								<div class="button"
@@ -50,10 +170,10 @@
 					<figure >
 						<img src="../img/xianyu.png" />
 						<figcaption >
-							<h3 class="tit" style="text-align: left;width: 90%;font-size: 28px;" >永恒仙域3d(android)</h3 >
+							<h3 class="tit" style="text-align: left;width: 95%;font-size: 28px;" >永恒仙域3d(android)</h3 >
 							<img style="height: 20px;margin-top: 8px;margin-bottom: 8px" src="../img/game_star_1.png">
 							<h3 class="tit"
-								style="text-align: left;width: 90%;" >真3d极致画面。唯美古风，国民仙侠，开创新一代的仙侠手游。</h3 >
+								style="text-align: left;width: 95%;color: #535353" >真3d极致画面。唯美古风，国民仙侠，开创新一代的仙侠手游。</h3 >
 						</figcaption >
 						<div style="text-align: center; position: relative; background: url(../img/s4.png) no-repeat center; background-size: 90% 100%;width: 120px;height: 60px;border-radius:15px 15px 15px 15px" >
 								<div class="button"
@@ -65,10 +185,10 @@
 					<figure >
 						<img src="../img/moshen.png" />
 						<figcaption >
-							<h3 class="tit" style="text-align: left;width: 90%;font-size: 28px;" >传奇霸业(ios)</h3 >
+							<h3 class="tit" style="text-align: left;width: 95%;font-size: 28px;" >传奇霸业(ios)</h3 >
 							<img style="height: 20px;margin-top: 8px;margin-bottom: 8px" src="../img/game_star_1.png">
 							<h3 class="tit"
-                                style="text-align: left;width: 90%" >魔神霸主是一款经典的即时战斗类游戏，画面美观，技能多元。</h3 >
+                                style="text-align: left;width: 95%;color: #535353" >魔神霸主是一款经典的即时战斗类游戏，画面美观，技能多元。</h3 >
 						</figcaption >
 						<div style="text-align: center; position: relative; background: url(../img/s4.png) no-repeat center; background-size: 90% 100%;width: 120px;height: 60px;border-radius:15px 15px 15px 15px" >
 								<div class="button"
