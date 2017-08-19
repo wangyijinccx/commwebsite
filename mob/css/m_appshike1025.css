@@ -29,8 +29,8 @@ ul,li{ margin:0px; padding:0px;list-style:none;}
 .sidebarbox .sidebar_top{width:100%;padding:24px 0px;}
 .sidebarbox .menulis{float: left;padding-left: 0px;width: 100%}
 .sidebarbox .menulis p{width: 100%;margin-bottom: 0px;margin-left: 0%;height:88px;}
-.sidebarbox .menulis a{color: #3b4459;font-size: 32px;display:block;width:80%;padding-left: 20%;padding-top: 20px}
-.sidebarbox .menulis p:active{color: #fff;background: #64c112;}
+.sidebarbox .menulis a{color: #3b4459;font-size: 32px;display:block;width:80%;padding-left: 20%;padding-top: 20px;height: 80%}
+.sidebarbox .menulis a:active{color: #fff;background: #64c112;}
 .sidebarbox .sidebar_btntryplay{border-radius: 100px;background-color: #ffffff;border: solid 3px #64c112;letter-spacing: 5px;color: #64c112;font-size:36px;padding: 24px 0px;width:460px;text-align: center;margin:120px auto;display: block;font-weight: 500;}
 .sidebarbox .sidebar_btntryplay:active{color: #fff;background: #64c112;}
 
