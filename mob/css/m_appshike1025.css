@@ -27,9 +27,10 @@ ul,li{ margin:0px; padding:0px;list-style:none;}
 .sidebarbox{width:80%;height: 100%;background: #fff;position:fixed;z-index: 88;left:-80%;top:0px;-webkit-transition:300ms;-moz-transition:300ms;-ms-transition:300ms;-o-transition:300ms;transition:300ms;}
 .closesidebar{background-position:50px 10px;width:112px;height:60px;display: inline-block;float: left;}
 .sidebarbox .sidebar_top{width:100%;padding:24px 0px;}
-.sidebarbox .menulis{float: left;padding-left: 60px;}
-.sidebarbox .menulis p{width: 100%;margin-bottom: 56px;margin-left: 35%}
-.sidebarbox .menulis a{color: #3b4459;font-size: 32px;}
+.sidebarbox .menulis{float: left;padding-left: 0px;width: 100%}
+.sidebarbox .menulis p{width: 100%;margin-bottom: 0px;margin-left: 0%;height:88px;}
+.sidebarbox .menulis a{color: #3b4459;font-size: 32px;display:block;width:80%;padding-left: 20%;padding-top: 20px}
+.sidebarbox .menulis p:active{color: #fff;background: #64c112;}
 .sidebarbox .sidebar_btntryplay{border-radius: 100px;background-color: #ffffff;border: solid 3px #64c112;letter-spacing: 5px;color: #64c112;font-size:36px;padding: 24px 0px;width:460px;text-align: center;margin:120px auto;display: block;font-weight: 500;}
 .sidebarbox .sidebar_btntryplay:active{color: #fff;background: #64c112;}
 
